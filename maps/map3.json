@@ -1,0 +1,256 @@
+{
+  "mapSize": {
+    "width": 3000,
+    "height": 2500
+  },
+  "startPoint": {
+    "x": 150,
+    "y": 150,
+    "label": "C",
+    "type": "space_station3"
+  },
+  "endPoint": {
+    "x": 2800,
+    "y": 2300,
+    "label": "A",
+    "type": "space_station1"
+  },
+  "wormholes": [
+    {
+      "x": 130,
+      "y": 130,
+      "radius": 40,
+      "toMap": "map2.json",
+      "toLabel": "C"
+    },
+    {
+      "x": 2900,
+      "y": 2400,
+      "radius": 50,
+      "toMap": "map1.json",
+      "toLabel": "A"
+    }
+  ],
+  "islands": [
+    {
+      "x": 700,
+      "y": 500,
+      "width": 130,
+      "height": 110,
+      "type": "large"
+    },
+    {
+      "x": 1100,
+      "y": 800,
+      "width": 90,
+      "height": 90,
+      "type": "medium"
+    },
+    {
+      "x": 1600,
+      "y": 400,
+      "width": 160,
+      "height": 130,
+      "type": "large"
+    },
+    {
+      "x": 1300,
+      "y": 1100,
+      "width": 100,
+      "height": 90,
+      "type": "medium"
+    },
+    {
+      "x": 2100,
+      "y": 700,
+      "width": 120,
+      "height": 100,
+      "type": "medium"
+    },
+    {
+      "x": 2300,
+      "y": 500,
+      "width": 90,
+      "height": 80,
+      "type": "small"
+    },
+    {
+      "x": 600,
+      "y": 1000,
+      "width": 80,
+      "height": 80,
+      "type": "small"
+    },
+    {
+      "x": 1800,
+      "y": 1500,
+      "width": 140,
+      "height": 120,
+      "type": "large"
+    },
+    {
+      "x": 800,
+      "y": 1600,
+      "width": 85,
+      "height": 75,
+      "type": "small"
+    },
+    {
+      "x": 2600,
+      "y": 1100,
+      "width": 105,
+      "height": 95,
+      "type": "medium"
+    },
+    {
+      "x": 400,
+      "y": 1800,
+      "width": 130,
+      "height": 110,
+      "type": "large"
+    },
+    {
+      "x": 1100,
+      "y": 1900,
+      "width": 70,
+      "height": 70,
+      "type": "small"
+    },
+    {
+      "x": 2000,
+      "y": 2000,
+      "width": 100,
+      "height": 90,
+      "type": "medium"
+    }
+  ],
+  "rocks": [
+    {
+      "x": 550,
+      "y": 450,
+      "radius": 30
+    },
+    {
+      "x": 950,
+      "y": 750,
+      "radius": 25
+    },
+    {
+      "x": 1400,
+      "y": 350,
+      "radius": 35
+    },
+    {
+      "x": 1200,
+      "y": 950,
+      "radius": 30
+    },
+    {
+      "x": 1900,
+      "y": 650,
+      "radius": 25
+    },
+    {
+      "x": 2200,
+      "y": 450,
+      "radius": 20
+    },
+    {
+      "x": 700,
+      "y": 1200,
+      "radius": 28
+    },
+    {
+      "x": 1700,
+      "y": 1300,
+      "radius": 22
+    },
+    {
+      "x": 2400,
+      "y": 900,
+      "radius": 30
+    },
+    {
+      "x": 500,
+      "y": 1500,
+      "radius": 25
+    },
+    {
+      "x": 1000,
+      "y": 1700,
+      "radius": 20
+    },
+    {
+      "x": 2000,
+      "y": 1800,
+      "radius": 32
+    },
+    {
+      "x": 300,
+      "y": 800,
+      "radius": 18
+    },
+    {
+      "x": 2700,
+      "y": 1600,
+      "radius": 25
+    },
+    {
+      "x": 1500,
+      "y": 1000,
+      "radius": 22
+    },
+    {
+      "x": 250,
+      "y": 400,
+      "radius": 20
+    },
+    {
+      "x": 2600,
+      "y": 600,
+      "radius": 28
+    },
+    {
+      "x": 1300,
+      "y": 2200,
+      "radius": 25
+    }
+  ],
+  "targets": [
+    {
+      "id": "target1",
+      "x": 400,
+      "y": 400,
+      "radius": 20,
+      "type": "rock"
+    },
+    {
+      "id": "target2",
+      "x": 900,
+      "y": 1000,
+      "radius": 20,
+      "type": "celestial_body"
+    },
+    {
+      "id": "target3",
+      "x": 1800,
+      "y": 800,
+      "radius": 20,
+      "type": "rock"
+    },
+    {
+      "id": "target4",
+      "x": 2500,
+      "y": 1500,
+      "radius": 20,
+      "type": "celestial_body"
+    },
+    {
+      "id": "target5",
+      "x": 1000,
+      "y": 2200,
+      "radius": 20,
+      "type": "rock"
+    }
+  ]
+}

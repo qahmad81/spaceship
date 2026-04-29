@@ -1,0 +1,44 @@
+# Done Tasks
+
+- Refactored oversized `main.js` into:
+  - `main.js` (bootstrap only)
+  - `js/assets.js`
+  - `js/map-utils.js`
+  - `js/game.js`
+- Updated `index.html` to use ES module script loading.
+- Enabled image-first rendering from `assets/`.
+- Set spaceship rendering to `assets/shuttle.png`.
+- Activated fuel consumption logic during thrust.
+- Activated projectile firing logic and ammo decrement.
+- Added wormhole traversal logic between maps.
+- Updated `maps/map1.json`, `maps/map2.json`, `maps/map3.json` with station typing and wormholes.
+- Added agent onboarding/documentation system:
+  - `agent.md`
+  - `ai_docs/project-structure.md`
+  - `ai_docs/agent_memory.md`
+  - `ai_docs/current-status.md`
+  - `ai_docs/done_tasks.md`
+  - `ai_docs/pending_tasks.md`
+- Cleaned and normalized visible UI text to English.
+- Added explicit station labels overlay (A/B/C) near stations in gameplay render.
+- Reintroduced minimap with wormhole/station/obstacle/ship markers.
+- Applied gameplay balancing pass for movement, fuel consumption, and shooting cadence.
+- Added automated smoke test: `scripts/smoke-test.mjs`.
+- Refactored gameplay runtime into modular files:
+  - `js/physics.js`
+  - `js/combat.js`
+  - `js/render.js`
+  - `js/ui.js`
+  - slimmed `js/game.js` to orchestration.
+- Added browser smoke harness script: `scripts/smoke-browser.mjs` (serves app + validates static runtime loading; interactive branch ready for Playwright).
+- Added wormhole transition flash overlay effect.
+- Added varied obstacle image rendering for targets.
+- Installed Playwright + Chromium runtime for full headless browser validation.
+- Enabled full interactive browser smoke test pass (`node scripts/smoke-browser.mjs`).
+- Added zone-aware obstacle/target typing normalization in `js/map-utils.js`.
+- Added explicit target type metadata in `maps/map3.json`.
+- Set project module type to ESM in `package.json`.
+- Added npm scripts for smoke validation:
+  - `smoke:maps`
+  - `smoke:browser`
+  - `test` (combined run).

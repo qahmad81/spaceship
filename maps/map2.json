@@ -1,0 +1,212 @@
+{
+  "mapSize": {
+    "width": 2800,
+    "height": 2100
+  },
+  "startPoint": {
+    "x": 100,
+    "y": 100,
+    "label": "B",
+    "type": "space_station2"
+  },
+  "endPoint": {
+    "x": 2700,
+    "y": 2000,
+    "label": "C",
+    "type": "space_station3"
+  },
+  "sun": {
+    "x": 1400,
+    "y": 1050,
+    "radius": 150
+  },
+  "planets": [
+    {
+      "x": 600,
+      "y": 300,
+      "radius": 100,
+      "type": "planet_large"
+    },
+    {
+      "x": 1000,
+      "y": 700,
+      "radius": 70,
+      "type": "planet_medium"
+    },
+    {
+      "x": 1500,
+      "y": 200,
+      "radius": 120,
+      "type": "planet_giant"
+    },
+    {
+      "x": 1200,
+      "y": 1000,
+      "radius": 80,
+      "type": "planet_medium"
+    },
+    {
+      "x": 2000,
+      "y": 600,
+      "radius": 90,
+      "type": "planet_large"
+    },
+    {
+      "x": 2200,
+      "y": 300,
+      "radius": 60,
+      "type": "planet_small"
+    },
+    {
+      "x": 500,
+      "y": 900,
+      "radius": 50,
+      "type": "planet_small"
+    },
+    {
+      "x": 1700,
+      "y": 1400,
+      "radius": 110,
+      "type": "planet_large"
+    },
+    {
+      "x": 700,
+      "y": 1500,
+      "radius": 65,
+      "type": "planet_small"
+    },
+    {
+      "x": 2500,
+      "y": 1000,
+      "radius": 75,
+      "type": "planet_medium"
+    },
+    {
+      "x": 300,
+      "y": 1700,
+      "radius": 100,
+      "type": "planet_large"
+    },
+    {
+      "x": 1000,
+      "y": 1800,
+      "radius": 40,
+      "type": "planet_small"
+    }
+  ],
+  "celestialBodies": [
+    {
+      "x": 450,
+      "y": 250,
+      "radius": 30
+    },
+    {
+      "x": 850,
+      "y": 550,
+      "radius": 25
+    },
+    {
+      "x": 1300,
+      "y": 150,
+      "radius": 35
+    },
+    {
+      "x": 1100,
+      "y": 850,
+      "radius": 30
+    },
+    {
+      "x": 1800,
+      "y": 500,
+      "radius": 25
+    },
+    {
+      "x": 2100,
+      "y": 250,
+      "radius": 20
+    },
+    {
+      "x": 600,
+      "y": 1100,
+      "radius": 28
+    },
+    {
+      "x": 1600,
+      "y": 1200,
+      "radius": 22
+    },
+    {
+      "x": 2300,
+      "y": 800,
+      "radius": 30
+    },
+    {
+      "x": 400,
+      "y": 1400,
+      "radius": 25
+    },
+    {
+      "x": 900,
+      "y": 1600,
+      "radius": 20
+    },
+    {
+      "x": 1900,
+      "y": 1700,
+      "radius": 32
+    },
+    {
+      "x": 200,
+      "y": 700,
+      "radius": 18
+    },
+    {
+      "x": 2600,
+      "y": 1500,
+      "radius": 25
+    },
+    {
+      "x": 1400,
+      "y": 900,
+      "radius": 22
+    },
+    {
+      "x": 200,
+      "y": 300,
+      "radius": 20
+    },
+    {
+      "x": 2500,
+      "y": 500,
+      "radius": 28
+    }
+  ],
+  "spaceStations": [
+    {
+      "x": 500,
+      "y": 500,
+      "type": "space_station1"
+    },
+    {
+      "x": 2000,
+      "y": 1500,
+      "type": "space_station2"
+    }
+  ],
+  "wormholes": [
+    {
+      "x": 120,
+      "y": 120,
+      "radius": 40,
+      "toMap": "map1.json",
+      "toLabel": "B"
+    },
+    {
+      "x": 2850,
+      "y": 2150,
+      "radius": 50,
+      "toMap": "map3.json",
+      "toLabel": "C"
+    }
+  ]
+}
