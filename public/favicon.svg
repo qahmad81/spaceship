@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Open World Space Tycoon icon">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#18233d"/>
+      <stop offset="100%" stop-color="#05070d"/>
+    </radialGradient>
+    <linearGradient id="ship" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f7fbff"/>
+      <stop offset="55%" stop-color="#9ed0ff"/>
+      <stop offset="100%" stop-color="#4b7eff"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <circle cx="256" cy="256" r="168" fill="none" stroke="#78d9ff" stroke-width="12" stroke-opacity="0.28"/>
+  <circle cx="256" cy="256" r="128" fill="none" stroke="#ff9b52" stroke-width="10" stroke-opacity="0.14"/>
+  <path d="M260 128c18 34 32 74 38 116 24 6 47 17 67 34-39 9-77 30-112 61-35-31-73-52-112-61 20-17 43-28 67-34 6-42 20-82 38-116z" fill="url(#ship)"/>
+  <path d="M240 220c-18 24-31 49-39 77 18 7 35 16 52 28 17-12 34-21 52-28-8-28-21-53-39-77h-26z" fill="#ffffff" fill-opacity="0.9"/>
+  <path d="M256 324c10 18 18 37 24 58-16 6-32 9-48 9 6-20 14-39 24-57z" fill="#ffb45a"/>
+  <circle cx="256" cy="256" r="20" fill="#05070d"/>
+  <circle cx="202" cy="193" r="11" fill="#ffdcb0" fill-opacity="0.9"/>
+  <circle cx="314" cy="208" r="8" fill="#78d9ff" fill-opacity="0.85"/>
+</svg>
