@@ -16,9 +16,11 @@ Open World Space Tycoon is a Phaser 2D browser game about flying a ship through 
 - `Arrow Keys`: Fly and rotate
 - `Space`: Fire
 - `E`: Open the station market
-- `R`: Close the station market
+- `R`: Close the station market after opening it
 - `G`: Jump through a gate
 - `N`: Start a new game
+
+The station flow uses `E` to dock and open the market, then `R` to undock or close it again.
 
 ## Screenshot
 
