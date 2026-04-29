@@ -20,5 +20,13 @@ coverage/
 *.tmp
 *.temp
 
-# Game assets (temporary ignore until processing is done)
-assets/
+# Game assets: keep raw extras ignored, allow only runtime-used art
+assets/*
+!assets/sun.png
+!assets/planet_large.png
+!assets/planet_medium.png
+!assets/planet_small.png
+!assets/rock.png
+!assets/space_station1.png
+!assets/wormhole.png
+!assets/celestial_body.png
