@@ -1,31 +1,27 @@
 # Current Status
 
 ## Implemented
-- Main script split: large `main.js` replaced with modular `js/` architecture.
-- Visual rendering switched to image assets for ship/stations/planets/asteroids/wormholes.
-- Background is black in gameplay render.
-- Ship is now a spaceship image (`shuttle.png`).
-- Fuel depletion is active while accelerating.
-- Shooting is active with ammo and cooldown.
-- Map transition via wormholes is active using `wormhole.png`.
-- Stations A/B/C represented with station images (`space_station1/2/3`).
-- Obstacles rendered as planets/celestial bodies from assets.
-- UI text has been normalized to clean English strings.
-- Station labels (A/B/C) are rendered above key stations.
-- Minimap is active with markers for wormholes, stations, obstacles, and ship.
-- Gameplay tuning pass applied (fuel drain, fire cooldown, ship handling).
-- Smoke test script exists and passes: `node scripts/smoke-test.mjs`.
-- `js/game.js` has been modularized into focused runtime modules (`physics`, `combat`, `render`, `ui`).
-- Browser smoke harness exists: `node scripts/smoke-browser.mjs` (static checks active now, interactive headless auto-enables when Playwright is installed).
-- Wormhole transition flash effect is active.
-- Target rendering now uses varied obstacle images.
-- Playwright is installed locally and browser smoke now runs in full interactive mode.
-- Obstacles/targets now support explicit and normalized `type` metadata (`rock` / `celestial_body`) via zone-aware normalization in `js/map-utils.js`.
+- Full runtime migration to Phaser + TypeScript + Vite.
+- Open-world entry flow (no mission start screen; immediate world spawn).
+- 12 connected maps with bidirectional gate links.
+- Per-map single primary body (`sun`, `planet_*`, `asteroid_belt_core`) plus asteroid belts.
+- Class-based gravity tuning integrated in world flight and projectile motion, with stronger pull around suns and planets.
+- Docking + station market UI (buy/sell/refuel/reammo) opens and closes only with `E`.
+- Player economy state: credits, cargo, fuel, ammo, ship capacities.
+- Station-specialized pricing (fuel-depot and armory trade opportunities included).
+- World data contracts implemented under `public/world/`.
+- Automated world validation script for maps/gates/stations/goods consistency.
+- Local profile persistence is now connected through `localStorage` with fallback to the default profile file.
+- Generated commodity icons and station badges are now wired into the market UI.
+- Economy has a bounded runtime drift + restock layer to keep trading from staying static.
+- Three ship variants are now generated and purchasable/useable from the map12 shipyard.
+- Automated gameplay smoke now covers market buy, combat ammo drain, longer gate routes, shipyard upgrade flow, and new-game reset.
+- WorldScene now exposes explicit helpers for weapon firing and gate jumping so smoke checks can exercise gameplay flows deterministically.
+- Stations now have world-layer visual beacons, type badges, and labels in the map view, and gates auto-attract from close range.
+- Colliding with suns, planets, or asteroid fields now ends the game with a game-over overlay.
+- Legacy profile saves are normalized on load so missing ship fields do not break startup.
+- `N` now starts a fresh game by clearing the saved profile, restoring the default profile, and persisting the reset state immediately.
 
-## Notes
-- Legacy maps are still supported through normalization logic.
-- `package.json` is configured for ESM (`"type": "module"`) to match runtime modules.
-- NPM test scripts are configured and passing:
-  - `npm run smoke:maps`
-  - `npm run smoke:browser`
-  - `npm test`
+## Current Gaps
+- Economy still needs a deeper balancing pass for price spread, stock regeneration, and anti-exploit clamps.
+- World-layer station NPC/avatar treatment can still be expanded beyond the current beacon/label presentation.

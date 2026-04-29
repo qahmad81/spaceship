@@ -1,0 +1,1 @@
+{"stationId":"st_map06","mapId":"map06","type":"fuel_depot","services":["trade","fuel"],"fuelPrice":4,"ammoPrice":18,"goods":[{"goodId":"fuel_cells","buyPrice":24,"sellPrice":17,"stock":240},{"goodId":"water","buyPrice":16,"sellPrice":11,"stock":130},{"goodId":"food","buyPrice":23,"sellPrice":16,"stock":120},{"goodId":"electronics","buyPrice":140,"sellPrice":104,"stock":25}]}

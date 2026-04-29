@@ -1,30 +1,23 @@
 # Agent Guide
 
 لغة التواصل بين الوكلاء والمستخدم: **العربية**.  
-لغة التطبيق داخل اللعبة + لغة التوثيق التقنية: **English**.
+لغة التطبيق والواجهات داخل اللعبة + لغة التوثيق التقني: **English**.
 
 ## Purpose
-This file is the entry point for any new agent joining the project.  
-Do not start from source code first. Start from `ai_docs/` documentation.
+This file is the onboarding entry point for any new agent.  
+Start with `ai_docs/` before reading implementation code.
 
 ## Documentation Index
-1. `ai_docs/project-structure.md`  
-   High-level folders, key files, and responsibilities.
-2. `ai_docs/agent_memory.md`  
-   Stable decisions, conventions, and historical context.
-3. `ai_docs/current-status.md`  
-   Current implementation state and known behavior.
-4. `ai_docs/done_tasks.md`  
-   Completed tasks log.
-5. `ai_docs/pending_tasks.md`  
-   Open tasks and next priorities.
+1. `ai_docs/project-structure.md`
+2. `ai_docs/agent_memory.md`
+3. `ai_docs/current-status.md`
+4. `ai_docs/done_tasks.md`
+5. `ai_docs/pending_tasks.md`
 
 ## Mandatory Update Rule
-After **every update** to gameplay, structure, assets usage, maps, controls, or UI:
+After every gameplay/architecture/data/art change:
 - Update `current-status.md`
-- Append to `done_tasks.md`
-- Adjust `pending_tasks.md`
-- If architecture changed, update `project-structure.md`
-- If a durable decision was made, update `agent_memory.md`
-
-This rule ensures any new agent can understand the project without reading code files.
+- Append `done_tasks.md`
+- Update `pending_tasks.md`
+- Update `project-structure.md` if folder/module layout changed
+- Update `agent_memory.md` for stable decisions

@@ -1,0 +1,1 @@
+{"stationId":"st_map03","mapId":"map03","type":"tech_market","services":["trade","ammo"],"fuelPrice":11,"ammoPrice":9,"goods":[{"goodId":"electronics","buyPrice":94,"sellPrice":81,"stock":130},{"goodId":"meds","buyPrice":82,"sellPrice":70,"stock":120},{"goodId":"luxury","buyPrice":155,"sellPrice":125,"stock":30},{"goodId":"ammo_crates","buyPrice":52,"sellPrice":41,"stock":160}]}

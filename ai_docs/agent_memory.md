@@ -1,13 +1,23 @@
 # Agent Memory
 
-## Decisions
-- Communication with user/agents is Arabic.
-- Application-facing strings and technical docs are English.
-- `main.js` is intentionally slim and delegates to `js/` modules.
-- Legacy map fields (`islands`, `rocks`) are normalized into space-style entities by `js/map-utils.js`.
-- Wormhole-based navigation between maps is enabled through `wormholes` arrays in map JSON files.
+## Stable Decisions
+- Engine is fully migrated to **Phaser + TypeScript + Vite**.
+- The game loop is **open-world sandbox/tycoon**, not mission-gated.
+- World uses JSON contracts under `public/world/` as source of truth.
+- Gravity is class-based tuning, where `sun` is intentionally stronger than planets but still maneuverable, and the close-range pull is now tuned to feel more pronounced.
+- Economy uses per-station prices and service specialization (fuel/ammo/trade differences).
+- Player profile persistence uses `localStorage` with fallback to `public/world/save/profile.json`.
+- `N` clears the saved profile and starts a fresh default game immediately.
+- `WorldScene` exposes explicit helpers for firing a weapon and jumping gates so smoke tests can exercise gameplay deterministically.
+- Stations open and close only with `E`, while gates auto-jump when you drift into their close attraction band.
+- The playfield edges now apply inward resistance so the ship is nudged back inside the map instead of leaving bounds.
+- Collisions with suns, planets, and asteroid fields end the current run.
+- Commodity icons and station badges are loaded from `public/world/icons/` and shown in the market panel.
+- Ship variants are loaded from `public/world/ships/` and can be purchased/equipped from the map12 shipyard.
+- Economy has a bounded runtime drift/restock tick; deeper balancing is still a separate pass.
+- `scripts/smoke-game.mjs` is the primary browser smoke for market buy, combat ammo drain, gate travel, shipyard upgrade, and new-game reset coverage.
 
 ## Conventions
-- Keep rendering image-first (avoid primitive placeholder shapes unless fallback is needed).
-- Preserve black space background for gameplay readability.
-- Keep gameplay tuning values centralized in `js/game.js` constructor.
+- Keep gameplay systems outside scene presentation logic whenever possible.
+- Use DOM overlay for dense market/HUD interaction.
+- Any new map must keep gate links valid and bi-directional.

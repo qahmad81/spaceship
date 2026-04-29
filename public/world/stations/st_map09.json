@@ -1,0 +1,1 @@
+{"stationId":"st_map09","mapId":"map09","type":"luxury_port","services":["trade","fuel"],"fuelPrice":14,"ammoPrice":15,"goods":[{"goodId":"luxury","buyPrice":126,"sellPrice":115,"stock":120},{"goodId":"electronics","buyPrice":109,"sellPrice":88,"stock":95},{"goodId":"meds","buyPrice":96,"sellPrice":74,"stock":60},{"goodId":"ammo_crates","buyPrice":72,"sellPrice":52,"stock":45}]}

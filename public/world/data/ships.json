@@ -1,0 +1,5 @@
+[
+  {"id":"starter_shuttle","name":"Starter Shuttle","maxSpeed":6.8,"acceleration":0.17,"rotationSpeed":0.06,"cargoCapacity":65,"fuelCapacity":260,"ammoCapacity":55,"fuelBurnRate":0.22,"spriteKey":"ship_starter"},
+  {"id":"hauler_mk1","name":"Hauler MK-1","maxSpeed":5.2,"acceleration":0.12,"rotationSpeed":0.045,"cargoCapacity":110,"fuelCapacity":320,"ammoCapacity":40,"fuelBurnRate":0.2,"spriteKey":"ship_hauler"},
+  {"id":"interceptor_x2","name":"Interceptor X2","maxSpeed":8.2,"acceleration":0.21,"rotationSpeed":0.075,"cargoCapacity":45,"fuelCapacity":220,"ammoCapacity":80,"fuelBurnRate":0.28,"spriteKey":"ship_interceptor"}
+]

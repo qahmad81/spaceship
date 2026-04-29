@@ -1,0 +1,1 @@
+{"stationId":"st_map05","mapId":"map05","type":"miner_outpost","services":["trade","fuel"],"fuelPrice":7,"ammoPrice":17,"goods":[{"goodId":"ore","buyPrice":26,"sellPrice":20,"stock":220},{"goodId":"alloys","buyPrice":58,"sellPrice":46,"stock":110},{"goodId":"machine_parts","buyPrice":90,"sellPrice":70,"stock":55},{"goodId":"food","buyPrice":30,"sellPrice":21,"stock":50}]}

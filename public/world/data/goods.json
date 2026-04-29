@@ -1,0 +1,12 @@
+[
+  {"id":"food","name":"Food Rations","category":"basic","basePrice":20,"mass":1,"iconKey":"good_food"},
+  {"id":"water","name":"Water","category":"basic","basePrice":14,"mass":1,"iconKey":"good_water"},
+  {"id":"ore","name":"Raw Ore","category":"industrial","basePrice":38,"mass":2,"iconKey":"good_ore"},
+  {"id":"alloys","name":"Alloys","category":"industrial","basePrice":72,"mass":2,"iconKey":"good_alloys"},
+  {"id":"electronics","name":"Electronics","category":"hightech","basePrice":105,"mass":1,"iconKey":"good_electronics"},
+  {"id":"meds","name":"Medical Kits","category":"hightech","basePrice":90,"mass":1,"iconKey":"good_meds"},
+  {"id":"fuel_cells","name":"Fuel Cells","category":"energy","basePrice":42,"mass":1,"iconKey":"good_fuel_cells"},
+  {"id":"ammo_crates","name":"Ammo Crates","category":"military","basePrice":64,"mass":1,"iconKey":"good_ammo"},
+  {"id":"luxury","name":"Luxury Goods","category":"luxury","basePrice":140,"mass":1,"iconKey":"good_luxury"},
+  {"id":"machine_parts","name":"Machine Parts","category":"industrial","basePrice":84,"mass":2,"iconKey":"good_parts"}
+]

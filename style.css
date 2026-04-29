@@ -1,246 +1,165 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+html, body, #app {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  background: #000;
+  color: #e8f0ff;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    background: #0a0a0a; /* Dark background for space */
-    color: white;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    direction: ltr;
+canvas {
+  display: block;
 }
 
-.game-container {
-    background: rgba(20, 20, 20, 0.8); /* Darker, slightly transparent container */
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(5px);
-    max-width: 900px;
-    width: 100%;
+#hud {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 30;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(130px, auto));
+  gap: 6px;
+  font-size: 13px;
 }
 
-.game-header {
-    text-align: center;
-    margin-bottom: 20px;
+#hud > div {
+  background: rgba(12, 20, 34, 0.86);
+  border: 1px solid #2d4b7a;
+  border-radius: 6px;
+  padding: 6px 8px;
 }
 
-.game-header h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    color: #00FFFF; /* Cyan for title */
+#market-panel {
+  position: fixed;
+  right: 12px;
+  top: 12px;
+  width: 360px;
+  max-height: 80vh;
+  overflow: auto;
+  z-index: 40;
+  background: rgba(8, 12, 20, 0.95);
+  border: 1px solid #43679f;
+  border-radius: 8px;
+  padding: 12px;
 }
 
-.game-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.05); /* Very subtle background for info */
-    padding: 10px 20px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #00FFFF; /* Cyan border */
+#market-panel.hidden {
+  display: none;
 }
 
-.speed-indicator {
-    font-weight: bold;
-    font-size: 1.2em;
-    color: #00FF00; /* Green for speed */
+#game-over {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  background: rgba(0, 0, 0, 0.62);
 }
 
-.objective {
-    font-style: italic;
-    opacity: 0.9;
-    color: #FFD700; /* Gold for objective */
+#game-over.hidden {
+  display: none;
 }
 
-.game-canvas-container {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
+.game-over-panel {
+  min-width: 260px;
+  max-width: 360px;
+  padding: 18px 20px;
+  background: rgba(8, 12, 20, 0.96);
+  border: 1px solid #7f95bd;
+  border-radius: 8px;
+  text-align: center;
 }
 
-#gameCanvas {
-    border: 3px solid #00FFFF; /* Cyan border */
-    border-radius: 10px;
-    background: #000000; /* Black for canvas background */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+.game-over-panel h2 {
+  margin: 0 0 10px;
+  font-size: 18px;
 }
 
-.controls-info {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 15px;
-    border-radius: 10px;
-    margin: 20px 0;
-    border: 1px solid #00FFFF;
+.game-over-panel p {
+  margin: 0 0 12px;
+  font-size: 13px;
+  color: #d8e2f8;
 }
 
-.controls-info h3 {
-    text-align: center;
-    margin-bottom: 15px;
-    font-size: 1.3em;
-    color: #00FFFF;
+.game-over-help {
+  font-size: 12px;
+  color: #91a9d6;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
-.controls-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+#market-panel h2 {
+  margin: 0 0 10px;
+  font-size: 16px;
 }
 
-.control-item {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 8px 12px;
-    border-radius: 5px;
-    text-align: center;
-    font-size: 0.9em;
-    border: 1px solid #00FFFF;
+.market-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
 }
 
-.game-status {
-    text-align: center;
-    padding: 15px;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 10px;
-    margin-top: 10px;
-    border: 1px solid #00FFFF;
+.station-icon,
+.good-icon {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  flex: 0 0 auto;
 }
 
-#gameMessage {
-    font-size: 1.1em;
-    font-weight: bold;
-    color: #FFD700;
+.market-title {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: capitalize;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-    .game-container {
-        padding: 15px;
-        margin: 10px;
-    }
-    
-    .game-header h1 {
-        font-size: 2em;
-    }
-    
-    .game-info {
-        flex-direction: column;
-        gap: 10px;
-    }
-    
-    #gameCanvas {
-        width: 100%;
-        max-width: 600px;
-        height: auto;
-    }
-    
-    .controls-grid {
-        grid-template-columns: 1fr;
-    }
+.market-subtitle {
+  font-size: 11px;
+  color: #9cb2d6;
 }
 
-/* Game states */
-.game-won {
-    background: rgba(0, 255, 0, 0.2) !important;
-    border-color: #00ff00 !important;
+.ship-offers-title {
+  margin: 10px 0 6px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #91a9d6;
 }
 
-.game-lost {
-    background: rgba(255, 0, 0, 0.2) !important;
-    border-color: #ff0000 !important;
+.market-row {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto;
+  gap: 6px;
+  align-items: center;
+  margin-bottom: 6px;
+  font-size: 12px;
 }
 
-/* Overlay styles */
-#overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.9); /* Darker overlay */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+.good-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-#overlay-content {
-    background: #1a1a1a; /* Dark background for overlay content */
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5); /* Cyan glow */
-    text-align: center;
-    color: #FFF;
-    max-width: 500px;
-    width: 90%;
+.market-row button {
+  border: 1px solid #4870af;
+  background: #10233e;
+  color: #dce8ff;
+  border-radius: 5px;
+  padding: 4px 6px;
+  cursor: pointer;
 }
 
-#overlay-content h2 {
-    color: #00FFFF;
-    margin-bottom: 20px;
-    font-size: 2em;
+#help-bar {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  z-index: 30;
+  font-size: 12px;
+  background: rgba(10, 16, 29, 0.85);
+  border: 1px solid #2d4b7a;
+  border-radius: 6px;
+  padding: 8px 10px;
 }
-
-#overlay-content label {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 1.1em;
-    color: #FFD700;
-}
-
-#overlay-content input[type="number"],
-#overlay-content select {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: 1px solid #00FFFF;
-    background: #333;
-    color: #FFF;
-    font-size: 1em;
-}
-
-#overlay-content button {
-    background: #00FFFF; /* Cyan button */
-    color: #000;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 8px;
-    font-size: 1.2em;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.1s ease;
-}
-
-#overlay-content button:hover {
-    background: #00bfff; /* Lighter cyan on hover */
-    transform: translateY(-2px);
-}
-
-#overlay-content p {
-    font-size: 1.1em;
-    margin-bottom: 15px;
-}
-
-#overlay-content ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 20px;
-}
-
-#overlay-content ul li {
-    margin-bottom: 8px;
-    font-size: 1.1em;
-    color: #FFF;
-}
-
-#overlay-content ul li span {
-    font-weight: bold;
-    color: #FFD700;
-}
-

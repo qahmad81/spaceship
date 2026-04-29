@@ -1,0 +1,10 @@
+{
+  "credits": 3000,
+  "cargo": {},
+  "fuel": 200,
+  "ammo": 30,
+  "ownedShips": ["starter_shuttle"],
+  "currentShip": "starter_shuttle",
+  "currentMap": "map01",
+  "position": { "x": 520, "y": 520 }
+}

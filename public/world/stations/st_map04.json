@@ -1,0 +1,1 @@
+{"stationId":"st_map04","mapId":"map04","type":"frontier","services":["trade","fuel","ammo"],"fuelPrice":12,"ammoPrice":13,"goods":[{"goodId":"food","buyPrice":27,"sellPrice":19,"stock":70},{"goodId":"water","buyPrice":20,"sellPrice":14,"stock":70},{"goodId":"ore","buyPrice":44,"sellPrice":32,"stock":80},{"goodId":"meds","buyPrice":110,"sellPrice":86,"stock":35}]}

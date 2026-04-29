@@ -1,0 +1,1 @@
+{"stationId":"st_map08","mapId":"map08","type":"bio_lab","services":["trade","fuel","ammo"],"fuelPrice":10,"ammoPrice":11,"goods":[{"goodId":"meds","buyPrice":71,"sellPrice":62,"stock":210},{"goodId":"water","buyPrice":13,"sellPrice":10,"stock":170},{"goodId":"electronics","buyPrice":118,"sellPrice":97,"stock":75},{"goodId":"food","buyPrice":22,"sellPrice":16,"stock":100}]}

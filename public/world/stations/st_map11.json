@@ -1,0 +1,1 @@
+{"stationId":"st_map11","mapId":"map11","type":"agri_station","services":["trade","fuel","ammo"],"fuelPrice":9,"ammoPrice":12,"goods":[{"goodId":"food","buyPrice":15,"sellPrice":11,"stock":260},{"goodId":"water","buyPrice":10,"sellPrice":8,"stock":260},{"goodId":"meds","buyPrice":98,"sellPrice":79,"stock":45},{"goodId":"fuel_cells","buyPrice":39,"sellPrice":30,"stock":70}]}

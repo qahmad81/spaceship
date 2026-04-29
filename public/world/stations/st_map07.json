@@ -1,0 +1,1 @@
+{"stationId":"st_map07","mapId":"map07","type":"armory","services":["trade","ammo"],"fuelPrice":13,"ammoPrice":6,"goods":[{"goodId":"ammo_crates","buyPrice":40,"sellPrice":31,"stock":220},{"goodId":"machine_parts","buyPrice":95,"sellPrice":76,"stock":80},{"goodId":"alloys","buyPrice":76,"sellPrice":59,"stock":90},{"goodId":"luxury","buyPrice":180,"sellPrice":138,"stock":20}]}

@@ -1,0 +1,1 @@
+{"stationId":"st_map01","mapId":"map01","type":"trade_hub","services":["trade","fuel","ammo"],"fuelPrice":8,"ammoPrice":14,"goods":[{"goodId":"food","buyPrice":18,"sellPrice":13,"stock":120},{"goodId":"water","buyPrice":12,"sellPrice":9,"stock":140},{"goodId":"fuel_cells","buyPrice":34,"sellPrice":26,"stock":90},{"goodId":"electronics","buyPrice":122,"sellPrice":95,"stock":45}]}

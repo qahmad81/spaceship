@@ -1,18 +1,24 @@
 {
   "name": "q3",
   "version": "1.0.0",
-  "description": "",
-  "main": "main.js",
+  "description": "Open-world space tycoon prototype",
+  "main": "src/main.ts",
   "scripts": {
-    "smoke:maps": "node scripts/smoke-test.mjs",
-    "smoke:browser": "node scripts/smoke-browser.mjs",
-    "test": "npm run smoke:maps && npm run smoke:browser"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 4173",
+    "validate:world": "node scripts/validate-world.mjs",
+    "smoke:game": "node scripts/smoke-game.mjs",
+    "test": "npm run validate:world && npm run smoke:game"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
   "devDependencies": {
-    "playwright": "^1.59.1"
+    "phaser": "^3.70.0",
+    "playwright": "^1.59.1",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.10"
   }
 }

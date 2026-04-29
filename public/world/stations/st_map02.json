@@ -1,0 +1,1 @@
+{"stationId":"st_map02","mapId":"map02","type":"refinery","services":["trade","fuel"],"fuelPrice":5,"ammoPrice":20,"goods":[{"goodId":"ore","buyPrice":30,"sellPrice":24,"stock":160},{"goodId":"alloys","buyPrice":64,"sellPrice":53,"stock":90},{"goodId":"fuel_cells","buyPrice":28,"sellPrice":21,"stock":150},{"goodId":"machine_parts","buyPrice":80,"sellPrice":68,"stock":70}]}

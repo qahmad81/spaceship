@@ -1,47 +1,36 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Island Navigator - Space Routes</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="game-container">
-        <div class="game-header">
-            <h1>Island Navigator</h1>
-            <div class="game-info">
-                <div class="speed-indicator">Speed: <span id="speed">0</span></div>
-                <div class="fuel-indicator">Fuel: <span id="fuelDisplay">1000</span></div>
-                <div class="projectile-indicator">Ammo: <span id="projectileDisplay">5</span></div>
-                <div class="objective" id="objectiveText">Objective: Reach destination station</div>
-            </div>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Open World Space Tycoon</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div id="hud">
+        <div>Credits: <span id="hud-credits">0</span></div>
+        <div>Fuel: <span id="hud-fuel">0</span></div>
+        <div>Ammo: <span id="hud-ammo">0</span></div>
+        <div>Cargo: <span id="hud-cargo">0/0</span></div>
+        <div>Map: <span id="hud-map">-</span></div>
+        <div>Station: <span id="hud-station">-</span></div>
+      </div>
+      <div id="market-panel" class="hidden">
+        <h2>Station Market</h2>
+        <div id="market-services"></div>
+        <div id="market-goods"></div>
+        <div class="market-help">Press E to close market</div>
+      </div>
+      <div id="game-over" class="hidden">
+        <div class="game-over-panel">
+          <h2>Game Over</h2>
+          <p id="game-over-message">You crashed.</p>
+          <div class="game-over-help">Press N for a new game</div>
         </div>
-
-        <div class="game-canvas-container">
-            <canvas id="gameCanvas" width="800" height="600"></canvas>
-        </div>
-
-        <div class="controls-info">
-            <h3>Controls</h3>
-            <div class="controls-grid">
-                <div class="control-item">Up Arrow: Thrust forward</div>
-                <div class="control-item">Down Arrow: Reverse thrust</div>
-                <div class="control-item">Left Arrow: Rotate left</div>
-                <div class="control-item">Right Arrow: Rotate right</div>
-                <div class="control-item">Space: Fire projectile</div>
-            </div>
-        </div>
-
-        <div class="game-status">
-            <div id="gameMessage">Use arrow keys to pilot the spaceship.</div>
-        </div>
+      </div>
+      <div id="help-bar">Move: Arrow Keys | Fire: Space | Dock/Trade: E | Gate Jump: G | New Game: N</div>
     </div>
-
-    <div id="overlay">
-        <div id="overlay-content"></div>
-    </div>
-
-    <script type="module" src="main.js"></script>
-</body>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
 </html>

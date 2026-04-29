@@ -1,19 +1,19 @@
 # Project Structure
 
-- `index.html`: App shell and canvas container.
-- `style.css`: Main visual styling.
-- `main.js`: Module entry point, bootstraps the game.
-- `js/assets.js`: Image loading pipeline from `assets/`.
-- `js/map-utils.js`: Map fetch + normalization from legacy shape data to space entities.
-- `js/game.js`: Core orchestration and state container.
-- `js/physics.js`: Movement, gravity, camera updates, world collisions, win condition.
-- `js/combat.js`: Projectile creation, movement, and projectile-target collisions.
-- `js/render.js`: World rendering, minimap rendering, station labels, particles, ship and projectiles.
-- `js/ui.js`: HUD updates, objective text, overlays, start/result/crash dialogs.
-- `maps/*.json`: Map definitions (stations, obstacles, gravity objects, wormholes).
-- `assets/*.png`: Visual assets (ship, stations, planets, wormhole, obstacles).
-- `scripts/smoke-test.mjs`: Automated map + wormhole integrity smoke test.
-- `scripts/smoke-browser.mjs`: Browser smoke test (local static server + interactive headless Playwright flow).
-- `package.json`: Node project metadata and test dependencies (`playwright`).
-- `ai_docs/*.md`: Agent documentation system.
-- `agent.md`: Agent onboarding and update policy.
+- `src/main.ts`: Phaser game bootstrap.
+- `src/scenes/`: `BootScene`, `WorldScene`, `UIScene` with world station beacons and market interactions.
+- `src/systems/`: gameplay systems (`gravity`, `economy`, `world-transition`).
+- `src/state.ts`: shared world/player runtime state.
+- `src/data-loader.ts`: loads world JSON contracts.
+- `src/ui.ts`: DOM HUD + market panel bindings.
+- `src/systems/persistence-system.ts`: profile load/save through `localStorage`.
+- `public/world/maps/*.json`: open-world maps (12 maps) + gates.
+- `public/world/stations/*.json`: per-station market/service config.
+- `public/world/data/goods.json`: tradable goods catalog.
+- `public/world/data/ships.json`: ship stats and capacities.
+- `public/world/ships/*.png`: generated ship variants used by the shipyard and world sprite.
+- `public/world/save/profile.json`: default profile shape.
+- `public/world/icons/*.png`: generated commodity and station badges.
+- `scripts/validate-world.mjs`: topology + schema consistency smoke validation.
+- `scripts/smoke-game.mjs`: browser smoke test for market, gate travel, and shipyard upgrade flow.
+- `assets/*.png`: current runtime textures (ship, stations, planets, gate, asteroid).
